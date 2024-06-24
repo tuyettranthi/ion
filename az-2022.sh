@@ -81,7 +81,7 @@ read -p "Please select your Azure VM size (type number then press enter):" ans
 case $ans in
     1  )  echo "OK"; echo "Standard_DS2_v2" > size ;;
     2  )  echo "OK"; echo "Standard_D2s_v5" > size ;;
-    3  )  echo "OK"; echo "Standard_B4ms_v4" > size  ;;
+    3  )  echo "OK"; echo "Standard_D4s_3" > size  ;;
     ""     )  echo "Empty choice!!!"; sleep 1; goto step3 ;;
     *      )  echo "Invalid choice!!!"; sleep 1 ; goto step3 ;;
 esac
