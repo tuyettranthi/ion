@@ -81,7 +81,7 @@ read -p "Please select your Azure VM size (type number then press enter):" ans
 case $ans in
     1  )  echo "OK"; echo "Standard_DS2_v2" > size ;;
     2  )  echo "OK"; echo "Standard_D2s_v5" > size ;;
-    3  )  echo "OK"; echo "Standard_D2s_v3" > size  ;;
+    3  )  echo "OK"; echo "Standard_B4ms_v4" > size  ;;
     ""     )  echo "Empty choice!!!"; sleep 1; goto step3 ;;
     *      )  echo "Invalid choice!!!"; sleep 1 ; goto step3 ;;
 esac
@@ -113,7 +113,7 @@ echo "🖥️  Creating In Process..."
 location=$(cat vm)
 image=$(cat win)
 size=$(cat size)
-rs=$(cat rs) && az vm create --resource-group $rs --name Windows-VM-PLUS --image $image --public-ip-sku Standard --size $size --location $location --admin-username azureuser --admin-password WindowsPassword@001 --nic-delete-option delete --os-disk-delete-option delete --out table
+rs=$(cat rs) && az vm create --resource-group $rs --name Windows-VM-PLUS --image $image --public-ip-sku Standard --size $size --location $location --admin-username Namkunbg --admin-password 123456Hi@@// --nic-delete-option delete --os-disk-delete-option delete --out table
 
 
 # : test
